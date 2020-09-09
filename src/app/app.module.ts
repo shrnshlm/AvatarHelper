@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+// import { AvatarHelperModule } from 'avatar-helper';
+import {AvatarHelperModule} from '../../projects/avatar-helper/src/lib/avatar-helper.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +12,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AvatarHelperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

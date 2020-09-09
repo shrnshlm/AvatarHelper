@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "avatar-helper": [
+        "dist/avatar-helper"
+      ],
+      "avatar-helper/*": [
+        "dist/avatar-helper/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

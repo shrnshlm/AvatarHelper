@@ -1,0 +1,14 @@
+<lib-edit-panel
+  (modelListChanged)="modelListChanged($event)"
+  [hidden]="isEditMode != true"
+  style="
+    font-size: 10px;
+    position: absolute;
+    left: 0px;
+    top: 40px;
+    bottom: 10px;
+    background-color: white;
+    z-index: 3;
+    border: 1px gray solid;
+    "
+  [modelList]="modelList"></lib-edit-panel>

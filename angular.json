@@ -120,6 +120,50 @@
           }
         }
       }
-    }},
-  "defaultProject": "AvatarLibrary"
+    },
+    "AvatarHelper": {
+      "projectType": "library",
+      "root": "projects/avatar-helper",
+      "sourceRoot": "projects/avatar-helper/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/avatar-helper/tsconfig.lib.json",
+            "project": "projects/avatar-helper/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/avatar-helper/ng-package.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/avatar-helper/src/test.ts",
+            "tsConfig": "projects/avatar-helper/tsconfig.spec.json",
+            "karmaConfig": "projects/avatar-helper/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/avatar-helper/tsconfig.lib.json",
+              "projects/avatar-helper/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "AvatarLibrary",
+  "cli": {
+    "analytics": "af74362b-8900-455c-9864-e9ca3528a25f"
+  }
 }
